@@ -12,12 +12,12 @@ exports.send = (rec) => {
     var mailOptions = {
         from: 'nodyTic@gmail.com',
         to: rec.mail,
-        subject: 'Inscription - Club Informatique',
+        subject: 'INSCRIPTION - CLUB INFORMATIQUE ESATIC',
         html: `
-        <h1>Inscription Club Info ESATIC 2019 - 2020</h1>
-        <p>Felicitations !!! <b>${rec.nom} ${rec.prenoms}</b> pour votre inscription au club informatique en tant que<b>${rec.type}</b>.</p>
-        <p>Vous faites desormains parti de la grande famille du club info</p>
-        <p>Les dates des differents tests vous seront annoncées <b style="color:red">ultérieurement</b></p>
+        <h1>INSCRIPTION - CLUB INFORMATIQUE ESATIC ESATIC 2019 - 2020</h1>
+        <p>Felicitations !!! <b>${rec.nom} ${rec.prenoms}</b> pour votre inscription au club informatique en tant que <b>${rec.type} ${rec.domaineFormation.niveau} en ${rec.domaineFormation.nom}</b>.</p>
+        <p>Vous faites desormains parti de la grande famille du club info.</p>
+        <p>Les dates des differents tests vous seront communiquées <b style="color:red">ultérieurement</b></p>
 
         <p>Pour plus d'informations, nos contacts sont les suivants : </p>
         <p>Tel : <b>+225 51 886 478</b></p>

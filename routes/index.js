@@ -16,4 +16,8 @@ router.get('/inscription/formateurs', function (req, res, next) {
   res.render('inscription/formateurs', { title: 'Club info | Inscription Formateurs', host: req.hostname });
 });
 
+router.get('/inscription/bureau', function (req, res, next) {
+  res.render('inscription/bureau', { title: 'Club info | Inscription du Bureau', host: req.hostname });
+});
+
 module.exports = router;

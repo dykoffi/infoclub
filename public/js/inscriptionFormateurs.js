@@ -19,7 +19,7 @@ $("#sendButton").click(() => {
                 listsup: $("#listcompsup").val(),
             },
 
-            domainneFormation : {
+            domaineFormation : {
                 nom : $("#domaine").val().trim(),
                 experience : $("#experience").val().trim(),
                 niveau : $("#niveau").val().trim(),
