@@ -1,12 +1,7 @@
+<script src="/javascripts/jquery.js"></script>
+<script src="/javascripts/bootstrap.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
 
-    <script src="/javascripts/jquery.js"></script>
-    <script src="/javascripts/bootstrap.min.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
-
-    <script type="text/javascript">
-        if (/1*.*.*.*/.test('<%= host %>')) {
-            var socket = io.connect("http://<%= host %>:5500")
-        } else {
-            var socket = io.connect("https://<%= host %>")
-        }
-    </script>
+<script type="text/javascript">
+    var socket = io.connect("https://<%= host %>")
+</script>
