@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        <%= title %>
+    </title>
+    <meta name="theme-color" content="white">
+    <%- include ../header -%>
+    <link rel="stylesheet" href="/stylesheet/inscription.css">
+</head>
+<body class="white">
+    <form action="#" class="col-12 align-self-center" id="form">
+        <div class="" >
+            <div class="row">
+                <div class="col-12 blue-text text-darken-2" id="voir">
+                    <div class="col-lg-8 offset-lg-2 col-12 p-5">
+                        <h3>Inscription</h3>
+                        <h6>des membres simples</h6>
+                    </div>
+                </div>
+                <div class="col-12 blue darken-2 white-text" id="voir">
+                    <div class="col-lg-8 offset-lg-2 col-12 p-5">
+                        <h3>Identifiez - Vous</h3>
+                        <h6>Renseignez des informations vous concernant</h6>
+                    </div>
+                </div>
+                    <% include infosPersonnel %>
+                    <div class="col-12 green darken-4 white-text" id="voir">
+                        <div class="col-lg-8 offset-lg-2 col-12 p-5">
+                            <h3>Domaine de formation</h3>
+                            <h6>Definissez le domaine dans le quel vous voulez dispenser les cours</h6>
+                        </div>
+                    </div>
+                    <% include domaineFormation %>
+                    <div class="col-12 grey darken-4 white-text" id="voir">
+                        <div class="col-lg-8 offset-lg-2 col-12 p-5">
+                            <h3>Auto-Critique</h3>
+                            <h6>Evaluez vous - meme vos compétences</h6>
+                        </div>
+                    </div>
+                    <% include autoCritique %>
+                    
+                    <% include message %>
+            </div>
+        </div>
+    </form>
+    <% include modal %>
+    <% include ../footer %>
+    <% include ../script %>
+    <script src="/js/inscriptionFormateurs.js"></script>
+</body>
+</html>

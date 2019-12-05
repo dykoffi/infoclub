@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+
+    </title>
+    <% include header %>
+    <link rel="stylesheet" href="/style/accueil.css">
+    <meta name="theme-color" content="white">
+</head>
+
+<body>
+    <div class="col-lg-12" id="particles-js"
+        style='height:100%;position: fixed;left:0; top:0;z-index:0; background-size: 100%; background-repeat: no-repeat; background-position: 0 0;'>
+    </div>
+    <div class="co row">
+        <div class="col-12 d-flex justify-content-center align-items-center text-center" id="baniere">
+            <div class="row p-4">
+
+                <div class="col-lg-12 col-12 mt-5">
+                    <h3 id="Gtitre" class="text-secondary mmontserrat">
+                        Club Informatique ESATIC
+                    </h3>
+                    <h4 id="details">
+                        " Apprendre l'informatique, un plaisir. "
+                    </h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 text-secondary justify-content-center align-items-center bg-dark text-white " id="equipe">
+            <div class="row p-4">
+                <div class="information col-lg-12 col-md-12 col-sm-12">
+                    <div class="titre">
+                        <h3 class="text-white">Qu'est ce que le club Informatique ?</h3>
+                    </div>
+                    <h5 class="purple-text text-lighten-3">Presentation</h5>
+
+                    <p class="white-text">
+                        Le club informatique est un club qui regroupe des passionné des TIC dans le but d'apprendre les
+                        nouvelles Technologies et d'ameliorer leur niveau et leurs competences en informatique.
+                    </p>
+
+                    <h5 class="purple-text text-lighten-3 mt-3">Objectifs</h5>
+
+                    <p class="white-text">
+                        Nos objectifs sont les suivants :
+                        <ul class="white-text">
+                            <li>Suciter l'amour de l'informatique</li>
+                            <li>Permettre à chacun d'atteindre le stade d'auto-apprentissage</li>
+                            <li>Developper nos connaissances et agrandir notre reseau professionnel</li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-12 bg-light text-dark ">
+            <div class="row p-4 justify-content-center align-items-center" id="applications">
+                <div class="col-lg-12 col-sm-12 col-md-12">
+                    <div class="row">
+                        <h3 class="col-12">Une Formation Qualifiante</h3>
+                        <% formation.forEach((f)=>{ %>
+                        <div class="col-lg-3 col-md-4 col-sm-12 d-flex mt-4">
+                            <div class="card rounded-0 border-0">
+                                <div class="card-body">
+                                    <h6 class="mb-n1 font-weight-bold">Formation</h6>
+                                    <h4 class="card-title font-weight-bold"><%=f.nom%></h4>
+                                    <p class="card-text"><%=f.details%></p>
+                                </div>
+                            </div>
+                        </div>
+                        <%})%>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="row p-4 justify-content-center align-items-center" id="applications">
+                <div class="col-lg-12 col-sm-12 col-md-12">
+                    <div class="row">
+                        <h3 class="col-12">Des activités passionantes</h3>
+                        <% app.forEach((f)=>{ %>
+                        <div class="col-lg-3 col-md-4 col-sm-12 d-flex mt-4">
+                            <div class="card border-0">
+                                <div class="card-body rounded bg-light text-dark">
+                                    <h6 class="mb-n1 font-weight-bold">Activité</h6>
+                                    <h4 class="card-title font-weight-bold"><%=f.nom%></h4>
+                                    <p class="card-text"><%=f.details%></p>
+                                </div>
+                            </div>
+                        </div>
+                        <%})%>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="row p-4 justify-content-center align-items-center" id="souscription">
+                <div class="col-lg-12 col-sm-12 col-md-12">
+                    <div class="row">
+                        <h3 class="col-12">Inscrivez-Vous pour en profiter</h3>
+                        <div class="col-lg-3 col-md-4 col-sm-12 d-flex  mt-3">
+                            <div class="card rounded-0 border-0">
+                                <div class="card-body rounded-0 brown-text text-darken-4">
+                                    <i class="fa fa-user fa-3x" aria-hidden="true"></i>
+                                    <h6 class="mb-n1">mode</h6>
+                                    <h4 class="card-title">Participant</h4>
+                                    <p class="card-text grey-text">
+                                        Participez au cours, projets et activés afin de vous améliorer.
+                                    </p>
+                                    <button class="btn brown darken-4 rounded-0 white-text"
+                                        onclick="window.location='/inscription/participants'" type="button">Inscription
+                                        <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12 d-flex mt-3">
+                            <div class="card rounded-0 border-0">
+                                <div class="card-body rounded-0 text-warning">
+                                    <i class="fas fa-user-tie fa-3x"></i>
+                                    <h6 class="mb-n1">mode</h6>
+                                    <h4 class="card-title">Formateur</h4>
+                                    <p class="card-text grey-text">
+                                        Dispensez une formation dans un domaines que maitrisez quelque soit votre
+                                        niveau.
+                                    </p>
+                                    <button class="btn btn-warning rounded-0" type="button"
+                                        onclick="window.location='/inscription/formateurs'">Inscription <i
+                                            class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-12 d-flex mt-3">
+                            <div class="card rounded-0 border-0">
+                                <div class="card-body rounded text-info">
+                                    <i class="fa fa-user-secret fa-3x" aria-hidden="true"></i>
+                                    <h6 class="mb-n1">mode</h6>
+                                    <h4 class="card-title">membre du Bureau</h4>
+                                    <p class="card-text grey-text">
+                                        Participez à l'organisation et la gestion des activités du club.
+                                    </p>
+                                    <button class="btn btn-info rounded-0" type="button">Inscription <i
+                                            class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <%- include footer %>
+    </div>
+    <% include script %>
+</body>
+
+<script src="/javascripts/particule.js"></script>
+<script src="/javascripts/app_particule.js"></script>
+
+</html>
