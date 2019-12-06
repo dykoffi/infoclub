@@ -88,7 +88,7 @@ function onListening() {
     debug('Listening on ' + bind);
 }
 
-var db = cloudant.use('infoclub')
+var db = cloudant.use('clubinfo')
 var mail = require('../functions/mail')
 
 var io = require("socket.io").listen(server)
@@ -128,7 +128,8 @@ io.sockets.on("connection", function (socket, pseudo) {
                     } else {
                         db.insert(data)
                             .then((body) => {
-                                mail.send(data)
+                                if (data.type == "Formateur") mail.send(data)
+                                else mail.send2(data)
                                 socket.emit("addOk")
                             })
                     }

@@ -14,15 +14,57 @@
         </div>
         <div class="form-group">
             <label for="dateNaissance">*Date de naissance</label>
-            <input id="datenaissance"
-                class="form-control-plaintext monter border border-secondary rounded-0 white p-3"
+            <input id="datenaissance" class="form-control-plaintext monter border border-secondary rounded-0 white p-3"
                 type="date" name="">
         </div>
         <div class="form-group">
+            <label for="sexe">*Sexe</label>
+            <select id="sexe" class="form-control-plaintext monter border border-secondary rounded-0 white p-3"
+                type="date" name="">
+                <option value="Feminin">Feminin</option>
+                <option value="Masculin">Masculin</option>
+            </select>
+        </div>
+        <div class="form-group">
             <label for="classe">*Classe</label>
-            <input id="classe"
+            <select id="classe"
                 class="form-control-plaintext monter border border-secondary rounded-0 grey-text text-darken-2 white p-3"
                 type="text" name="">
+                <optgroup label="Licence 1">
+                    <option value="SRIT 1A">SRIT 1A</option>
+                    <option value="SRIT 1B">SRIT 1B</option>
+                    <option value="SRIT 1C">SRIT 1C</option>
+                    <option value="RTEL 1">RTEL 1</option>
+                    <option value="SIGL 1">SIGL 1</option>
+                    <option value="TWIN 1">TWIN 1</option>
+                </optgroup>
+                <optgroup label="Licence 2">
+                    <option value="SRIT 2A">SRIT 2A</option>
+                    <option value="SRIT 2B">SRIT 2B</option>
+                    <option value="RTEL 2">RTEL 2</option>
+                    <option value="SIGL 2">SIGL 2</option>
+                    <option value="TWIN 2">TWIN 2</option>
+                </optgroup>
+                <optgroup label="Licence 3">
+                    <option value="SRIT 3A">SRIT 3A</option>
+                    <option value="SRIT 3B">SRIT 3B</option>
+                    <option value="RTEL 3">RTEL 3</option>
+                    <option value="SIGL 3">SIGL 3</option>
+                    <option value="TWIN 3">TWIN 3</option>
+                </optgroup>
+                <optgroup label="Master 1">
+                    <option value="INFO">INFO</option>
+                    <option value="RTEL">RTEL</option>
+                    <option value="MBDS">MBDS</option>
+                </optgroup>
+                <optgroup label="Master 2">
+                    <option value="SIGL">SIGL</option>
+                    <option value="RTEL">RTEL</option>
+                    <option value="MBDS">MBDS</option>
+                    <option value="SITW">MBDS</option>
+                </optgroup>
+
+            </select>
         </div>
         <div class="form-group">
             <label for="mail">*Mail</label>

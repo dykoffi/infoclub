@@ -1,11 +1,13 @@
 $("#sendButton").click(() => {
-    if (($("#nom").val().trim() == "" || $("#prenoms").val().trim() == "" || $("#datenaissance").val().trim() == "" || $("#mail").val().trim() == "" || $("#contact").val().trim() == "" || $("#compweb").val().trim() == "" || $("#compmobile").val().trim() == "" || $("#compia").val().trim() == "" || $("#compdesign").val().trim() == "" || $("#niveau").val().trim() == "" || $("#domaine").val().trim() == "" || $("#pourquoi").val().trim() == "" || $("#experience").val().trim() == "")) {
+    if (($("#nom").val().trim() == "" || $("#prenoms").val().trim() == "" || $("#datenaissance").val().trim() == "" || $("#mail").val().trim() == "" || $("#contact").val().trim() == "" || $("#compweb").val().trim() == "" || $("#compmobile").val().trim() == "" || $("#compia").val().trim() == "" || $("#compdesign").val().trim() == "" || $("#niveau").val().trim() == "" || $("#domaine").val().trim() == "" || $("#pourquoi").val().trim() == "" || $("#experience").val().trim() == "" || $("#classe").val().trim() == "")) {
         $('#modal').modal("show")
     } else {
         var data = {
             type: "Formateur",
             nom: $("#nom").val().trim(),
             prenoms: $("#prenoms").val().trim(),
+            classe: $("#classe").val().trim(),
+            sexe: $("#sexe").val().trim(),
             datenaissance: $("#datenaissance").val().trim(),
             mail: $("#mail").val().trim(),
             contact: $("#contact").val().trim(),
@@ -24,7 +26,9 @@ $("#sendButton").click(() => {
                 experience : $("#experience").val().trim(),
                 niveau : $("#niveau").val().trim(),
                 pourquoi : $("#pourquoi").val(),
-            }
+            },
+            heure : new Date()
+
         }
         $("#textSend").attr("hidden", false)
         $("#textError").attr("hidden", true)
@@ -32,6 +36,7 @@ $("#sendButton").click(() => {
     }
 })
 socket.on("addOk", () => {
+    document.getElementById("form").reset()
     $("#textSend").attr("hidden", true)
     $("#textSuccess").attr("hidden", false)
     setTimeout(() => {

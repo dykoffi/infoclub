@@ -6,7 +6,7 @@ exports.activites = () => {
         },
         {
             'nom': 'Hackathon',
-            'details': "Evaluez vos compétences à  travers des hackathon et des projets innovants."
+            'details': "Evaluez vos compétences à  travers des hackathons et des projets innovants."
         },
         {
             'nom': 'Code LAB',
@@ -14,7 +14,7 @@ exports.activites = () => {
         },
         {
             'nom': 'Conference',
-            'details': "Participez à des conferences et des salons numeriques dans le but d'agrandir vos connaissances et votre reseau professionel."
+            'details': "Participez à des conférences et des salons numériques dans le but d'agrandir vos connaissances et votre reseau professionel."
         },
 
     ]
@@ -28,7 +28,7 @@ exports.Formation = () => {
         },
         {
             'nom': 'WEB',
-            'details': "Concevez et realisez des sites et applications web dans le but de resoudre des problèmes donnés."
+            'details': "Concevez et réalisez des sites et applications web dans le but de resoudre des problèmes donnés."
         },
         {
             'nom': 'Mobile',
@@ -44,7 +44,7 @@ exports.Formation = () => {
         },
         {
             'nom': 'Cloud',
-            'details': "Initiez vous au cloud computing et e-service afin de deployer vos solution sur des serveurs distants."
+            'details': "Initiez vous au cloud computing et e-service afin de deployer vos solutions sur des serveurs distants."
         },
     ]
 }
